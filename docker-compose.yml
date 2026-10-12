@@ -1,0 +1,12 @@
+services:
+  mongodb:
+    image: mongo:8
+    container_name: fitcontrol-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - fitcontrol-mongodb-data:/data/db
+
+volumes:
+  fitcontrol-mongodb-data:
